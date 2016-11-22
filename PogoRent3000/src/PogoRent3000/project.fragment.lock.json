@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "exports": {
+    "PogoBaseDS/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/PogoGeoDS.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/PogoGeoDS.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/PogoGeoDS.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "PogoGeoJson/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/PogoGeoJson.dll": {}
+      },
+      "runtime": {
+        "../PogoGeoTools/libs/GeoAPI.dll": {},
+        "../PogoGeoTools/libs/NetTopologySuite.IO.GeoJSON.dll": {},
+        "../PogoGeoTools/libs/NetTopologySuite.dll": {},
+        "bin/Debug/PogoGeoJson.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/PogoGeoJson.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "PogoGeoTools/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/PogoGeoTools.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/PogoGeoTools.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/PogoGeoTools.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
