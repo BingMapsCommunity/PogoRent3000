@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "module": "amd",
+    "outFile": "wwwroot/lib/pogorent3000.js"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
