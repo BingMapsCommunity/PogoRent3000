@@ -250,3 +250,6 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+#POGORENT3000
+!/PogoRent3000/PogoGeoTools/libs/*
