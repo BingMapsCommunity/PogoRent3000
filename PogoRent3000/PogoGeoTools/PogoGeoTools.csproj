@@ -45,9 +45,7 @@
     <Compile Include="Parks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="libs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BaseDS\PogoBaseDS.csproj">
       <Project>{84d0755c-a853-4c6c-ba43-4760e8a4edd0}</Project>
@@ -57,6 +55,18 @@
       <Project>{d4273696-1c91-4529-812f-57c220d3000c}</Project>
       <Name>PogoGeoJson</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libs\GeoAPI.dll" />
+    <Content Include="libs\GeoAPI.xml" />
+    <Content Include="libs\NetTopologySuite.dll" />
+    <Content Include="libs\NetTopologySuite.IO.GeoJSON.dll" />
+    <Content Include="libs\NetTopologySuite.IO.GeoJSON.pdb" />
+    <Content Include="libs\NetTopologySuite.IO.GeoJSON.xml" />
+    <Content Include="libs\NetTopologySuite.pdb" />
+    <Content Include="libs\NetTopologySuite.xml" />
+    <Content Include="libs\Newtonsoft.Json.dll" />
+    <Content Include="libs\Newtonsoft.Json.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
