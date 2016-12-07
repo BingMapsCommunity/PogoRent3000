@@ -1,0 +1,38 @@
+﻿.row{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1em;
+}
+
+[class*="col-"] {
+    padding: 1em;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+body{
+    margin: 0 !important;
+}
+ul{
+    list-style: none;
+    padding: 0 !important;
+    margin: 0!important;
+    display: flex;
+    position: relative;
+    top: 0.25em;
+}
+li{
+    padding: 0 1em;
+    cursor:pointer;
+}
+li:hover{
+    color: hotpink;
+}
+
+@font-face {
+    font-family: 'c64';
+    src: url('fonts/C64_Pro-STYLE.woff') format('woff');
+}

@@ -18,7 +18,7 @@ var PogoRent3000;
             mapContainer.style.width = "98vw";
             mapContainer.style.height = "95vh";
             this.map = new Microsoft.Maps.Map(mapContainer, {
-                credentials: '',
+                credentials: 'AsXOzwxphj5MnBu0JvpoF7joDb6BdaAa8NHUjUbHj-S9n-_1DzS3vTHfSVmVyXnn',
                 center: new Microsoft.Maps.Location(-28.014407569005286, 153.42029571533203),
                 zoom: 10
             });

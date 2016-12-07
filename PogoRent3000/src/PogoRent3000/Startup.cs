@@ -44,6 +44,7 @@ namespace PogoRent3000
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Map}/{action=Index}");
+                
             });
         }
     }
