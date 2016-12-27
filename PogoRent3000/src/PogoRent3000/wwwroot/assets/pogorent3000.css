@@ -42,4 +42,13 @@ li:hover{
     text-align: center;
 }
 
+#rental{
+    padding: 2em 0;
+    background-color: #4aa1dc;
+}
+#pogo-spots{
+    padding: 2em 0;
+    background-color: #ecbe00;
+}
+
 
