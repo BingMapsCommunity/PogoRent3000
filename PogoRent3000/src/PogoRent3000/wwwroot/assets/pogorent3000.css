@@ -15,6 +15,7 @@
 
 body{
     margin: 0 !important;
+    font-family: c64;
 }
 ul{
     list-style: none;
@@ -36,3 +37,9 @@ li:hover{
     font-family: 'c64';
     src: url('fonts/C64_Pro-STYLE.woff') format('woff');
 }
+
+.horiz-center-text{
+    text-align: center;
+}
+
+

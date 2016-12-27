@@ -1,3 +1,11 @@
+var PogoRent3000;
+(function (PogoRent3000) {
+    class Animation {
+        static scrollTo(element) {
+        }
+    }
+    PogoRent3000.Animation = Animation;
+})(PogoRent3000 || (PogoRent3000 = {}));
 /// <reference path="definitions/microsoft.maps.d.ts" />
 /// <reference path="definitions/microsoft.maps.all.d.ts" />
 /// <reference path="definitions/modules/geojson.d.ts" />

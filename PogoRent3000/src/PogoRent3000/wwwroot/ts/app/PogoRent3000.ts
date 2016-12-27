@@ -4,7 +4,7 @@
 /// <reference path="definitions/whatwg-fetch.d.ts" />
 
 
-module PogoRent3000 {
+namespace PogoRent3000 {
     export class Map {
 
         private map: Microsoft.Maps.Map;
