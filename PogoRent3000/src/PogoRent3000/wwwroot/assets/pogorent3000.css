@@ -1,4 +1,4 @@
-﻿.row{
+﻿.row {
     display: flex;
     flex-flow: row wrap;
     margin-bottom: 1em;
@@ -9,28 +9,29 @@
     width: 100%;
 }
 
-@media screen and (max-width: 768px){
-
+@media screen and (max-width: 768px) {
 }
 
-body{
+body {
     margin: 0 !important;
     font-family: c64;
 }
-ul{
+
+section {
+    display: none;
+}
+
+ul {
     list-style: none;
     padding: 0 !important;
-    margin: 0!important;
+    margin: 0 !important;
     display: flex;
     position: relative;
     top: 0.25em;
 }
-li{
+
+li {
     padding: 0 1em;
-    cursor:pointer;
-}
-li:hover{
-    color: hotpink;
 }
 
 @font-face {
@@ -38,17 +39,71 @@ li:hover{
     src: url('fonts/C64_Pro-STYLE.woff') format('woff');
 }
 
-.horiz-center-text{
+.horiz-center-text {
     text-align: center;
 }
 
-#rental{
+.pull-right {
+    float: right;
+}
+
+#rental {
     padding: 2em 0;
     background-color: #4aa1dc;
 }
-#pogo-spots{
+
+#pogo-spots {
     padding: 2em 0;
     background-color: #ecbe00;
 }
 
+#pogo-map-tour {
+    padding: 2em 0;
+    background-color: #7cb82b;
+    text-align: center;
+}
 
+#map {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 30em;
+}
+
+#footer {
+    background-color: #6a247d;
+    padding: 2em;
+    height: 7em;
+}
+
+#blanket {
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#disclaimer {
+    width: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+    #disclaimer > button {
+        margin: 1em;
+        float: right;
+        border: none;
+        color: white;
+        background-color: greenyellow;
+        padding: 1em;
+    }
+
+        #disclaimer > button:hover {
+            cursor: pointer;
+        }

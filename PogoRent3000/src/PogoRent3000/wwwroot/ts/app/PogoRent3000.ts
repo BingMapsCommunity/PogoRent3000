@@ -14,6 +14,20 @@ namespace PogoRent3000 {
             this.loadBingMapModules();
             this.initMap();
             this.fetchGeoJson();
+            this.attachEvtent();
+        }
+
+        private attachEvtent(): void {
+            let button = document.querySelector("#disclaimer > button") as HTMLButtonElement;
+            button.addEventListener("click", evt => {
+                (document.querySelector("#blanket") as HTMLDivElement).style.display = "none";
+                let sections = document.querySelectorAll("section");
+                for (let i = 0; i < sections.length; i++) {
+                    let elem = sections.item(i) as HTMLElement;
+                    elem.style.display = "block";
+                }
+                (document.querySelector("#map") as HTMLDivElement).style.height = "30em";
+            });
         }
 
         private loadBingMapModules(): void {
@@ -22,12 +36,12 @@ namespace PogoRent3000 {
 
         private initMap(): void {
             let mapContainer = document.querySelector("#map") as HTMLDivElement;
-            mapContainer.style.width = "98vw";
-            mapContainer.style.height = "95vh";
             this.map = new Microsoft.Maps.Map(mapContainer, {
-                credentials: 'AsXOzwxphj5MnBu0JvpoF7joDb6BdaAa8NHUjUbHj-S9n-_1DzS3vTHfSVmVyXnn',
+                credentials: '',
                 center: new Microsoft.Maps.Location(-28.014407569005286, 153.42029571533203),
-                zoom: 10
+                zoom: 10,
+                disableScrollWheelZoom: true,
+                disableStreetside: true
             });
             this.goldCoasLayer = new Microsoft.Maps.Layer("goldCoast");
             this.map.layers.insert(this.goldCoasLayer);

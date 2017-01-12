@@ -17,18 +17,31 @@ var PogoRent3000;
             this.loadBingMapModules();
             this.initMap();
             this.fetchGeoJson();
+            this.attachEvtent();
+        }
+        attachEvtent() {
+            let button = document.querySelector("#disclaimer > button");
+            button.addEventListener("click", evt => {
+                document.querySelector("#blanket").style.display = "none";
+                let sections = document.querySelectorAll("section");
+                for (let i = 0; i < sections.length; i++) {
+                    let elem = sections.item(i);
+                    elem.style.display = "block";
+                }
+                document.querySelector("#map").style.height = "30em";
+            });
         }
         loadBingMapModules() {
             Microsoft.Maps.loadModule("Microsoft.Maps.GeoJson");
         }
         initMap() {
             let mapContainer = document.querySelector("#map");
-            mapContainer.style.width = "98vw";
-            mapContainer.style.height = "95vh";
             this.map = new Microsoft.Maps.Map(mapContainer, {
-                credentials: 'AsXOzwxphj5MnBu0JvpoF7joDb6BdaAa8NHUjUbHj-S9n-_1DzS3vTHfSVmVyXnn',
+                credentials: '',
                 center: new Microsoft.Maps.Location(-28.014407569005286, 153.42029571533203),
-                zoom: 10
+                zoom: 10,
+                disableScrollWheelZoom: true,
+                disableStreetside: true
             });
             this.goldCoasLayer = new Microsoft.Maps.Layer("goldCoast");
             this.map.layers.insert(this.goldCoasLayer);
