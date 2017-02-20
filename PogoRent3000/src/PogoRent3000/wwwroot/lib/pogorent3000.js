@@ -73,6 +73,6 @@ var PogoRent3000;
 })(PogoRent3000 || (PogoRent3000 = {}));
 document.onreadystatechange = () => {
     if (document.readyState === "complete")
-        new PogoRent3000.Map();
+        window["map"] = new PogoRent3000.Map();
 };
 //# sourceMappingURL=pogorent3000.js.map

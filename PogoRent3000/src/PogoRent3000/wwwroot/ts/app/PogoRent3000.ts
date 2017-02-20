@@ -7,7 +7,7 @@
 namespace PogoRent3000 {
     export class Map {
 
-        private map: Microsoft.Maps.Map;
+        public map: Microsoft.Maps.Map;
         private goldCoasLayer: Microsoft.Maps.Layer;
 
         constructor() {
@@ -76,5 +76,5 @@ namespace PogoRent3000 {
 
 document.onreadystatechange = () => {
     if (document.readyState === "complete")
-        new PogoRent3000.Map();
+        window["map"] = new PogoRent3000.Map();
 }
