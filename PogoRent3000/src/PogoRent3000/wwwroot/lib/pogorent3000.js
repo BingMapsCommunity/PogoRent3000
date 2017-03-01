@@ -38,8 +38,8 @@ var PogoRent3000;
             let mapContainer = document.querySelector("#map");
             this.map = new Microsoft.Maps.Map(mapContainer, {
                 credentials: '',
-                center: new Microsoft.Maps.Location(-28.014407569005286, 153.42029571533203),
-                zoom: 10,
+                center: new Microsoft.Maps.Location(62.39076529972394, 17.301207346598325),
+                zoom: 13,
                 disableScrollWheelZoom: true,
                 disableStreetside: true
             });
@@ -73,6 +73,6 @@ var PogoRent3000;
 })(PogoRent3000 || (PogoRent3000 = {}));
 document.onreadystatechange = () => {
     if (document.readyState === "complete")
-        window["map"] = new PogoRent3000.Map();
+        new PogoRent3000.Map();
 };
 //# sourceMappingURL=pogorent3000.js.map

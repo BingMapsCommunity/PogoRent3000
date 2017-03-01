@@ -3,11 +3,10 @@
 /// <reference path="definitions/modules/geojson.d.ts" />
 /// <reference path="definitions/whatwg-fetch.d.ts" />
 
-
 namespace PogoRent3000 {
     export class Map {
 
-        public map: Microsoft.Maps.Map;
+        private map: Microsoft.Maps.Map;
         private goldCoasLayer: Microsoft.Maps.Layer;
 
         constructor() {
@@ -35,11 +34,11 @@ namespace PogoRent3000 {
         }
 
         private initMap(): void {
-            let mapContainer = document.querySelector("#map") as HTMLDivElement;
+            let mapContainer = document.querySelector("#map") as HTMLDivElement;           
             this.map = new Microsoft.Maps.Map(mapContainer, {
                 credentials: '',
-                center: new Microsoft.Maps.Location(-28.014407569005286, 153.42029571533203),
-                zoom: 10,
+                center: new Microsoft.Maps.Location(62.39076529972394, 17.301207346598325),
+                zoom: 13,
                 disableScrollWheelZoom: true,
                 disableStreetside: true
             });
@@ -76,5 +75,5 @@ namespace PogoRent3000 {
 
 document.onreadystatechange = () => {
     if (document.readyState === "complete")
-        window["map"] = new PogoRent3000.Map();
+        new PogoRent3000.Map();
 }
