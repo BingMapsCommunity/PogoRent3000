@@ -30,9 +30,9 @@ namespace PogoGeoJson
         {
             var data = ReadFile();
             var reader = new NetTopologySuite.IO.GeoJsonReader();
-            var feature = reader.Read<FeatureCollection>(data);
+            var features = reader.Read<FeatureCollection>(data);
                
-            var geoJson = GetGeoJsonText(feature);
+            var geoJson = GetGeoJsonText(features);
             return geoJson;
         }
 
