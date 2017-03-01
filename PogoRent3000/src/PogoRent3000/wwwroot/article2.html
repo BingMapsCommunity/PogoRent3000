@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="assets/pogorent3000.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="blanket">
+        <div id="disclaimer">
+            <p>
+                This is a site with the intention to show a robust Bing Maps implemention.
+                The site has an article describing the Bing Maps implementation.
+            </p>
+            The suffix 3000 of Pogo Rent clearly descibes it is a technique from the future!<br />
+            <button>OK GOT IT!</button>
+        </div>
+    </div>
+    <section id="header" style="height: 2em;background-color: dodgerblue;
+    color: white;
+    font-family:c64;">
+        <ul>
+            <li>Bing Maps Pogo Rent Site - Implementing Bing Maps example site.</li>
+        </ul>
+    </section>
+    <div>
+        <div style="width: 100%; margin: 0; height: 20em; background-image:url('assets/imgs/pogo.png'); background-repeat:no-repeat; background-size: cover;">
+            <div style="color: white; font-family: c64; font-size: 2em; width: 100%; height: 100%; text-align: center; padding-top: 5em;">POGO RENT 3000!</div>
+        </div>
+    </div>
+    <section id="rental" class="horiz-center-text">
+        <p>
+            First time? No problem? :) We have plenty of Pogos.<br />
+            Wheather you are a newbie or advanced.<br />
+            You want it - we got it is our motto!
+        </p>
+    </section>
+    <section id="content">
+        <div id="pogo-spots" class="horiz-center-text">
+            <img src="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/62.39924783320134,17.297113007574943/15?mapSize=200,200&key=AsXOzwxphj5MnBu0JvpoF7joDb6BdaAa8NHUjUbHj-S9n-_1DzS3vTHfSVmVyXnn" />
+            <img src="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/62.38182467547593,17.33412540147757/15?mapSize=200,200&key=AsXOzwxphj5MnBu0JvpoF7joDb6BdaAa8NHUjUbHj-S9n-_1DzS3vTHfSVmVyXnn" />
+            <img src="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/62.40109216936292,17.33412540147757/16?mapSize=200,200&key=AsXOzwxphj5MnBu0JvpoF7joDb6BdaAa8NHUjUbHj-S9n-_1DzS3vTHfSVmVyXnn" />
+            <div id="pogo-spots-title">Pogo spots!</div>
+        </div>
+        <div id="pogo-map-tour">
+            If you need a guide, we are happy to pogo with you! We are based in Brisbane, Australia and Sundsvall, Sweden.
+        </div>
+        <div id="map">
+
+        </div>
+    </section>
+
+    <section id="footer">
+        <img class="pull-right" src="assets/imgs/MVP_Logo_Preferred_Cyan300_RGB_72ppi.png" />
+    </section>
+
+    <script type="text/javascript" src="http://www.bing.com/api/maps/mapcontrol?branch=release" async defer></script>
+    <script src="lib/pogorent3000.js"></script>
+</body>
+</html>
