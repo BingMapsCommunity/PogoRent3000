@@ -36,7 +36,7 @@ namespace PogoRent3000 {
         private initMap(): void {
             let mapContainer = document.querySelector("#map") as HTMLDivElement;           
             this.map = new Microsoft.Maps.Map(mapContainer, {
-                credentials: 'AsXOzwxphj5MnBu0JvpoF7joDb6BdaAa8NHUjUbHj-S9n-_1DzS3vTHfSVmVyXnn',
+                credentials: '',
                 center: new Microsoft.Maps.Location(62.39076529972394, 17.301207346598325),
                 zoom: 13,
                 disableScrollWheelZoom: true,
