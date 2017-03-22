@@ -11,14 +11,14 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "http://localhost:5000/article1.html",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "PogoRent3000": {
-      "commandName": "Project",
-      "launchBrowser": true,
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\pfahlen\\Documents\\PogoRent3000\\PogoRent3000\\src\\PogoRent3000\\bin\\Debug\\net461\\win7-x64\\PogoRent3000.exe",
       "launchUrl": "http://localhost:5000/api/GeoService?service=wfs&version=1.0.0&request=GetFeature",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

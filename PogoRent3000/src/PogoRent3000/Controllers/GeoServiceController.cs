@@ -18,7 +18,7 @@ namespace PogoRent3000.Controllers
         {
             if (service.ToUpper() == "WFS" && version == "1.0.0" && request == "GetFeature")
             {
-                var parks = new PogoGeoTools.Parks();
+                var parks = new PogoGeoTools.Parks(@"wwwRoot\data\sundsvall.json");
                 var json = parks.GetParks();
                 return json;
             }

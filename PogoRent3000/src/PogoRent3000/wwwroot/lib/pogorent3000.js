@@ -1,11 +1,3 @@
-var PogoRent3000;
-(function (PogoRent3000) {
-    class Animation {
-        static scrollTo(element) {
-        }
-    }
-    PogoRent3000.Animation = Animation;
-})(PogoRent3000 || (PogoRent3000 = {}));
 /// <reference path="definitions/microsoft.maps.d.ts" />
 /// <reference path="definitions/microsoft.maps.all.d.ts" />
 /// <reference path="definitions/modules/geojson.d.ts" />
@@ -37,14 +29,14 @@ var PogoRent3000;
         initMap() {
             let mapContainer = document.querySelector("#map");
             this.map = new Microsoft.Maps.Map(mapContainer, {
-                credentials: '',
+                credentials: 'AsXOzwxphj5MnBu0JvpoF7joDb6BdaAa8NHUjUbHj-S9n-_1DzS3vTHfSVmVyXnn',
                 center: new Microsoft.Maps.Location(62.39076529972394, 17.301207346598325),
                 zoom: 13,
                 disableScrollWheelZoom: true,
                 disableStreetside: true
             });
-            this.goldCoasLayer = new Microsoft.Maps.Layer("goldCoast");
-            this.map.layers.insert(this.goldCoasLayer);
+            this.geoJsonLayer = new Microsoft.Maps.Layer("goldCoast");
+            this.map.layers.insert(this.geoJsonLayer);
         }
         parseGeoJSON(geoJson) {
             if (!Microsoft.Maps.GeoJson) {
@@ -55,7 +47,7 @@ var PogoRent3000;
             else {
                 let geoJSONtext = JSON.stringify(geoJson);
                 let primitives = Microsoft.Maps.GeoJson.read(geoJSONtext);
-                this.goldCoasLayer.add(primitives);
+                this.geoJsonLayer.add(primitives);
             }
         }
         fetchGeoJson() {

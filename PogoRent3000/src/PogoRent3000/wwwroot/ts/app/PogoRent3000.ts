@@ -7,7 +7,7 @@ namespace PogoRent3000 {
     export class Map {
 
         private map: Microsoft.Maps.Map;
-        private goldCoasLayer: Microsoft.Maps.Layer;
+        private geoJsonLayer: Microsoft.Maps.Layer;
 
         constructor() {
             this.loadBingMapModules();
@@ -36,14 +36,14 @@ namespace PogoRent3000 {
         private initMap(): void {
             let mapContainer = document.querySelector("#map") as HTMLDivElement;           
             this.map = new Microsoft.Maps.Map(mapContainer, {
-                credentials: '',
+                credentials: 'AsXOzwxphj5MnBu0JvpoF7joDb6BdaAa8NHUjUbHj-S9n-_1DzS3vTHfSVmVyXnn',
                 center: new Microsoft.Maps.Location(62.39076529972394, 17.301207346598325),
                 zoom: 13,
                 disableScrollWheelZoom: true,
                 disableStreetside: true
             });
-            this.goldCoasLayer = new Microsoft.Maps.Layer("goldCoast");
-            this.map.layers.insert(this.goldCoasLayer);
+            this.geoJsonLayer = new Microsoft.Maps.Layer("goldCoast");
+            this.map.layers.insert(this.geoJsonLayer);
         }
 
         private parseGeoJSON(geoJson: JSON): void {
@@ -54,7 +54,7 @@ namespace PogoRent3000 {
             } else {
                 let geoJSONtext = JSON.stringify(geoJson);
                 let primitives = Microsoft.Maps.GeoJson.read(geoJSONtext) as Array<Microsoft.Maps.IPrimitive>;
-                this.goldCoasLayer.add(primitives);
+                this.geoJsonLayer.add(primitives);
             }
         }
         
@@ -65,7 +65,7 @@ namespace PogoRent3000 {
             });
 
             fetch(request).then((response) => {
-                return response.json(); // maybe just text ??? 
+                return response.json() as Promise<JSON>; // maybe just text ??? 
             }).then((geojson) => {
                 this.parseGeoJSON(geojson);
             });

@@ -3,11 +3,12 @@
     public class Parks 
     {
         PogoGeoJson.GeoJsonRepository geoJsonDS;
-        public Parks()
+        public Parks(string path)
         {
-            var location = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            var currentDirectory = System.IO.Path.GetDirectoryName(location);
-            var path = currentDirectory + @"\..\..\..\..\data\gold-coast.json";
+            //var location = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            //var currentDirectory = System.IO.Path.GetDirectoryName(location);
+            
+            //var path = @"wwwRoot\data\sundsvall.json"; // currentDirectory + @"\..\..\..\..\data\sundsvall.json";
             geoJsonDS = new PogoGeoJson.GeoJsonRepository(path);
         }
 

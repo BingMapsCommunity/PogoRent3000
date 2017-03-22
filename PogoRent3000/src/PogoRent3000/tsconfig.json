@@ -9,7 +9,9 @@
     "outFile": "wwwroot/lib/pogorent3000.js"
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "obj",
+    "bin"
   ],
   "compileOnSave": true
 }
